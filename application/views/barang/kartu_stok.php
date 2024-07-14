@@ -84,6 +84,131 @@
       margin-left: 270px; /* Adjusted for sidebar width plus padding */
       padding: 20px;
     }
+    .card-header {
+      background-color: #ffffff; 
+      color: #000; 
+    }
+    .card-header{
+      background-color: #ffffff; 
+      color: #000; 
+    }
+    .marquee-container {
+            position: fixed;
+            top: 0;
+            left: 250px;
+            width: calc(100% - 250px);
+            height: 40px;
+            overflow: hidden;
+            background-color: #fff;
+            color: #000;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+            position: fixed;
+            top: 0;
+            left: 250px;
+            width: calc(100% - 250px);
+            height: 40px;
+            overflow: hidden;
+            background-color: #fff;
+            color: #000;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+            position: fixed;
+            top: 0;
+            left: 250px;
+            width: calc(100% - 250px);
+            height: 40px;
+            overflow: hidden;
+            background-color: #B8860B;
+            color: #fff;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
   </style>
 </head>
 
@@ -103,7 +228,9 @@
       </li>
     </ul>
   </div>
-
+  <div class="marquee-container">
+        <div class="marquee">Selamat Datang di Klinik Universitas AKI</div>
+    </div>
   <div class="content mt-5">
     <div class="container">
       <div class="card shadow">
@@ -120,7 +247,38 @@
             <input type="text" name="search" class="form-control mr-2" placeholder="Cari Tipe Transaksi" value="<?php echo $search; ?>">
             <button type="submit" class="btn btn-primary">Cari</button>
           </form>
-
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Barang Masuk</h3>
+                </div>
+                <div class="card-body">
+                  <form action="<?php echo site_url('barang/masuk/'.$barang->id); ?>" method="post">
+                    <div class="form-group">
+                      <input type="number" class="form-control" id="qty_masuk" name="qty" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Masukkan</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Barang Keluar</h3>
+                </div>
+                <div class="card-body">
+                  <form action="<?php echo site_url('barang/keluar/'.$barang->id); ?>" method="post">
+                    <div class="form-group">
+                      <input type="number" class="form-control" id="qty_keluar" name="qty" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Keluarkan</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
           <?php if ($this->session->flashdata('success')): ?>
             <div class="alert alert-success">
               <?php echo $this->session->flashdata('success'); ?>

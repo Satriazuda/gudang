@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo base_url('/asset/bootstrap/css/bootstrap.min.css'); ?>">
     <style>
         body {
-            background: linear-gradient(to right, #a2c2e7, #e0f4f4); /* Gradien biru semi-putih */
+            background: #F5F5DC; /* Light brownish-white background */
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -16,6 +17,7 @@
             height: 100vh;
             margin: 0;
         }
+
         .login-container {
             padding: 40px;
             background: #ffffff;
@@ -27,30 +29,36 @@
             position: relative;
             overflow: hidden;
         }
+
         .login-header {
             margin-bottom: 30px;
             text-align: center;
         }
+
         .login-header h2 {
             font-weight: 700;
-            color: #0044cc; /* Biru gelap */
+            color: #0044cc;
         }
+
         .form-group label {
             font-weight: bold;
-            color: #0044cc; /* Biru gelap */
+            color: #0044cc;
         }
+
         .form-control {
             border-radius: 8px;
-            border: 1px solid #b0bec5; /* Border abu-abu lembut */
+            border: 1px solid #b0bec5;
             box-shadow: none;
             transition: all 0.3s ease;
         }
+
         .form-control:focus {
             box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
             border-color: #38bdf8;
         }
+
         .btn-primary {
-            background: linear-gradient(to right, #0044cc, #3383ff); /* Gradien biru */
+            background: linear-gradient(to right, #0044cc, #3383ff);
             border: none;
             border-radius: 8px;
             padding: 12px 20px;
@@ -58,24 +66,30 @@
             font-weight: bold;
             transition: background 0.3s ease, transform 0.2s ease;
         }
+
         .btn-primary:hover {
-            background: linear-gradient(to right, #3383ff, #0044cc); /* Gradien biru terbalik */
+            background: linear-gradient(to right, #3383ff, #0044cc);
             transform: scale(1.05);
         }
+
         .btn-primary:focus {
             box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
         }
+
         .alert {
             margin-bottom: 20px;
             font-size: 14px;
         }
+
         .text-center a {
-            color: #0044cc; /* Biru gelap */
+            color: #0044cc;
             font-weight: bold;
         }
+
         .text-center a:hover {
             text-decoration: underline;
         }
+
         .wave {
             position: absolute;
             bottom: 0;
@@ -86,11 +100,13 @@
             background-size: cover;
             opacity: 0.3;
         }
+
         @keyframes slideIn {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -98,6 +114,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -131,4 +148,5 @@
     </div>
     <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
 </body>
+
 </html>

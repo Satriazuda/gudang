@@ -85,12 +85,90 @@
       background-color: #c82333;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+    .marquee-container {
+            position: fixed;
+            top: 0;
+            left: 250px;
+            width: calc(100% - 250px);
+            height: 40px;
+            overflow: hidden;
+            background-color: #fff;
+            color: #000;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+            position: fixed;
+            top: 0;
+            left: 250px;
+            width: calc(100% - 250px);
+            height: 40px;
+            overflow: hidden;
+            background-color: #B8860B;
+            color: #fff;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="sidebar">
-        <img src="<?php echo base_url();?>/asset/img/logo1.png" alt="Logo Klinik Universitas AKI">
+        <img src="<?php echo base_url();?>/asset/img/logo.png" alt="Logo Klinik Universitas AKI">
         <h2>Klinik Universitas AKI</h2>
         <ul>
             <li><a class="nav-link" href="<?php echo site_url('Home'); ?>">Home</a></li>
@@ -104,7 +182,9 @@
             </li>
         </ul>
     </div>
-
+    <div class="marquee-container">
+        <div class="marquee">Selamat Datang di Klinik Universitas AKI</div>
+    </div>
     <div class="content mt-4">
         <div class="table-responsive">
             <table class="table table-striped table-bordered">

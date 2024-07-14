@@ -7,9 +7,10 @@ class User extends CI_Controller {
     }
 
     public function index() {
-        $data['user_count'] = $this->User_model->get_user_count();
-        $data['tampil'] = $this->User_model->get_all_users(); // Pastikan ada metode untuk mendapatkan semua pengguna
-        $this->load->view('user', $data);
+        $data['users'] = $this->User_model->get_all_users(); // Mendapatkan data semua user
+        $data['user_count'] = count($data['users']); // Mendapatkan jumlah user
+        $data['tampil'] = 'Data User'; // Contoh pengiriman variabel tampil
+        $this->load->view('user', $data); // Menampilkan view dengan dat
     }
 
     public function tampil(){
